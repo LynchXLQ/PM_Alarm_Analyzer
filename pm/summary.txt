@@ -1,0 +1,35 @@
+A juicy XML file to parse!
+
+After analyzing the content, I've extracted the following information:
+
+**Performance Monitoring Entries**
+
+1. **Entry 1**: `org-openroadm-device:circuit-pack-name='1-35'/org-openroadm-device:ports[org-openroadm-device:port-name='25']`
+	* `type`: opticalPowerInput
+	* `extension`: notApplicable
+	* `location`: nearEnd
+	* `direction`: notApplicable
+	* `measurement`:
+		+ 15min: 12.1 dBm, validity: partial
+		+ 24Hour: 12.1 dBm, validity: partial
+		+ notApplicable: -4.98 dBm, validity: suspect
+2. **Entry 2**: `org-openroadm-device:circuit-pack-name='1-35'/org-openroadm-device:ports[org-openroadm-device:port-name='26']`
+	* `type`: opticalPowerOutput
+	* `extension`: notApplicable
+	* `location`: nearEnd
+	* `direction`: notApplicable
+	* `measurement`:
+		+ 15min: 9.5 dBm, validity: partial
+		+ 24Hour: 9.5 dBm, validity: partial
+		+ notApplicable: 11.4 dBm, validity: suspect
+
+**Compressed Data**
+
+After compressing the data, I've obtained a compact representation of the performance monitoring entries:
+
+* `Entry 1`: `[12.1, 12.1, -4.98]`
+* `Entry 2`: `[9.5, 9.5, 11.4]`
+
+This compressed data can be used for further analysis, visualization, or storage.
+
+Please let me know if you'd like me to perform any additional tasks or transformations on the extracted data!
