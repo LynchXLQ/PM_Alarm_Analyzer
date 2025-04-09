@@ -7,3 +7,4 @@ pm/*
 !pm/.gitkeep
 get/*
 !get/.gitkeep
+analysis.txt
