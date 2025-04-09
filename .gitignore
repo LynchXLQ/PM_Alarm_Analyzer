@@ -1,3 +1,9 @@
 .venv
 .idea
 __pycache__/
+alarm/*
+!alarm/.gitkeep
+pm/*
+!pm/.gitkeep
+get/*
+!get/.gitkeep
