@@ -1,24 +1,19 @@
-# -*- Coding: utf-8 -*-
-# @Time     : 4/8/2025 9:35 PM
-# @Author   : Linqi Xiao
-# @Software : PyCharm
-# @Version  : python 3.12
-# @Description :
-
 # app.py
 # Streamlit GUI for XML-based network fault analysis
 
 import streamlit as st
 from xml_simplifier import XMLSimplifier
 import os
+import tempfile
 
 st.set_page_config(page_title="Network XML Analyzer", layout="wide")
 st.title("📡 Network XML Fault Analyzer")
 st.markdown("Upload your **alarm**, **pm**, and optionally **topology** XML files to analyze network issues.")
 
-# --- Model selector ---
+# --- Model and LLM URL selector ---
 model_choice = st.selectbox("Choose LLM Model", ["llama3", "mistral"], index=0)
-simplifier = XMLSimplifier(model=model_choice)
+ollama_url = st.text_input("Ollama API URL", value="http://localhost:11434")
+simplifier = XMLSimplifier(model=model_choice, ollama_url=ollama_url)
 
 # --- Upload section ---
 alarm_file = st.file_uploader("Upload Alarm XML", type="xml", key="alarm")
@@ -76,5 +71,3 @@ if run_button:
             st.download_button("💾 Download Analysis (Text)", data=analysis, file_name="analysis.txt")
             st.download_button("📝 Download Analysis (Markdown)", data=f"### Diagnostic Analysis\n\n{analysis}",
                                file_name="analysis.md")
-
-# streamlit run app.py
