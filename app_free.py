@@ -2,7 +2,7 @@
 # Streamlit GUI for XML-based network fault analysis
 
 import streamlit as st
-from xml_simplifier import XMLSimplifier
+from ollama_xml_analyzer import XMLSimplifier
 import os
 import tempfile
 
