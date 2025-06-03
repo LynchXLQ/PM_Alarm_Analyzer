@@ -22,7 +22,7 @@ A user-friendly Streamlit web app for analyzing optical network alarm and perfor
 
 ```
 .
-├── alarm/                 # Folder to store uploaded or default alarm XML
+├── alarm/                # Folder to store uploaded or default alarm XML
 ├── app.py                # Local Ollama-based app
 ├── app_expensive.py      # GPT-4o/4o-mini app with cost tracking
 ├── gpt_xml_analyzer.py   # GPTXMLAnalyzer class for OpenAI version
